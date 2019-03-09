@@ -1,4 +1,4 @@
-package jun.spring.ch1.ioc.printer.POJO;
+package jun.spring.ch1.ioc.POJO;
 
 public class Hello {
 

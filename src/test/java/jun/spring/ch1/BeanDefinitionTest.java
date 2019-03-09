@@ -1,9 +1,11 @@
-package jun.spring.ch1.ioc;
+package jun.spring.ch1;
 
 import com.sun.deploy.util.StringUtils;
-import jun.spring.ch1.ioc.printer.POJO.Hello;
+import jun.spring.ch1.ioc.POJO.Hello;
+import jun.spring.ch1.ioc.POJO.StringPrinter;
 import org.junit.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.support.StaticApplicationContext;
 
@@ -14,7 +16,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
 
-public class ApplicationContextTest {
+public class BeanDefinitionTest {
 
     @Test
     public void BEAN_DEFINITION_빈등록_테스트() {
@@ -70,7 +72,20 @@ public class ApplicationContextTest {
 
     @Test
     public void BEAN_DEFINITION_DI_테스트() {
-        
+        StaticApplicationContext ac = new StaticApplicationContext();
+
+        ac.registerBeanDefinition("printer", new RootBeanDefinition(StringPrinter.class)); // Printer Bean Definition 등록
+
+        BeanDefinition helloDef = new RootBeanDefinition(Hello.class);
+        helloDef.getPropertyValues().addPropertyValue("name", "Spring");
+        helloDef.getPropertyValues().addPropertyValue("printer", new RuntimeBeanReference("printer"));
+
+        ac.registerBeanDefinition("hello", helloDef); // Hello Bean Definition 등록
+
+        Hello hello = ac.getBean("hello", Hello.class);
+        hello.print();
+
+        assertThat(ac.getBean("printer").toString(), is("Hello Spring"));
     }
 
 }
