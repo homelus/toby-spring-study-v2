@@ -1,4 +1,4 @@
-package jun.spring.ch1;
+package jun.spring.ch1.ioc;
 
 import jun.spring.ch1.ioc.POJO.Hello;
 import jun.spring.ch1.ioc.POJO.Printer;

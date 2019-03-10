@@ -1,4 +1,4 @@
-package jun.spring.ch1;
+package jun.spring.ch1.ioc;
 
 import com.sun.deploy.util.StringUtils;
 import jun.spring.ch1.ioc.POJO.Hello;

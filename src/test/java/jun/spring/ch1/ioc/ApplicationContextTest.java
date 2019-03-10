@@ -1,11 +1,10 @@
-package jun.spring.ch1;
+package jun.spring.ch1.ioc;
 
 import jun.spring.ch1.ioc.POJO.Hello;
 import org.junit.Test;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
-import org.springframework.web.context.WebApplicationContext;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
