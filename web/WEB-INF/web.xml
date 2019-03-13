@@ -15,8 +15,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            /WEB-INF/daoContext.xml
-            /WEB-INF/applicationContext.xml
+            classpath:daoContext.xml
+            classpath:applicationContext.xml
         </param-value>
     </context-param>
 
@@ -35,8 +35,8 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                /WEB-INF/applicationContext.xml
-                /WEB-INF/spring-servlet.xml
+                classpath:spring-servlet.xml
+                classpath:applicationContext.xml
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
