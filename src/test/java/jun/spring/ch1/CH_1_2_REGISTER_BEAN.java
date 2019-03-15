@@ -5,6 +5,8 @@ import jun.spring.ch1.bean.AnnotatedHelloBean;
 import jun.spring.ch1.config.AnnotatedHelloConfig;
 import jun.spring.ch1.config.HelloConfig;
 import jun.spring.ch1.ioc.POJO.Hello;
+import jun.spring.ch1.service.HelloService_1;
+import jun.spring.ch1.service.HelloService_2;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -31,7 +33,6 @@ public class CH_1_2_REGISTER_BEAN {
 
     /**
      * 자바 코드에 의한 빈 등록: @Configuration 클래스의 @Bean 메소드
-     *
      * @see org.springframework.context.annotation.Configuration
      * @see org.springframework.context.annotation.Bean
      */
@@ -61,6 +62,28 @@ public class CH_1_2_REGISTER_BEAN {
         assertThat(hello.getPrinter(), is(sameInstance(hello2.getPrinter())));
     }
 
+    /**
+     * 자바 코드에 의한 빈 등록: @Configuration 클래스를 사용안하는 @Bean 메소드
+     * @see org.springframework.context.annotation.Bean
+     */
+
+    @Test
+    public void CONFIGURATION_이용안하는_컨텍스트_테스트() {
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(HelloService_1.class);
+        Hello hello1 = ctx.getBean("hello1", Hello.class);
+        Hello hello2 = ctx.getBean("hello2", Hello.class);
+
+        assertThat(hello1.getPrinter(), is(not(sameInstance(hello2.getPrinter()))));
+    }
+
+    @Test
+    public void CONFIGURATION_이용안하지만_SIGNLETON_주입_테스트() {
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(HelloService_2.class);
+        Hello hello1 = ctx.getBean("hello1", Hello.class);
+        Hello hello2 = ctx.getBean("hello2", Hello.class);
+
+        assertThat(hello1.getPrinter(), is(sameInstance(hello2.getPrinter())));
+    }
 
 
 }
