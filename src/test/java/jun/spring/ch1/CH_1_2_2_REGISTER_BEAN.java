@@ -17,7 +17,7 @@ import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsSame.sameInstance;
 import static org.junit.Assert.assertThat;
 
-public class CH_1_2_REGISTER_BEAN {
+public class CH_1_2_2_REGISTER_BEAN {
 
     /**
      * XML 태그 등록

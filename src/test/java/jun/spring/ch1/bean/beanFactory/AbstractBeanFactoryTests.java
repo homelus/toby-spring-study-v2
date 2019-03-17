@@ -4,7 +4,7 @@ import jun.spring.ch1.model.TestBean;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public abstract class AbstractBeanFactoryTests {
 
@@ -16,11 +16,11 @@ public abstract class AbstractBeanFactoryTests {
         assertTrue(getBeanFactory().containsBean("roderick"));
         TestBean rod = (TestBean) getBeanFactory().getBean("rod");
         TestBean roderick = (TestBean) getBeanFactory().getBean("roderick");
-        assertTrue("not == ", rod != roderick);
-        assertTrue("rod.name id Rod", rod.getName().equals("Rod"));
-        assertTrue("rod.age is 31", rod.getAge() == 31);
-        assertTrue("roderick.name is Roderick", roderick.getName().equals("Roderick"));
-        assertTrue("roderick.age was inherited", roderick.getAge() == rod.getAge());
+        assertNotSame("not == ", rod, roderick);
+        assertEquals("rod.name id Rod", "Rod", rod.getName());
+        assertEquals("rod.age is 31", 31, rod.getAge());
+        assertEquals("roderick.name is Roderick", "Roderick", roderick.getName());
+        assertEquals("roderick.age was inherited", roderick.getAge(), rod.getAge());
     }
 
     @Test(expected = IllegalArgumentException.class)
