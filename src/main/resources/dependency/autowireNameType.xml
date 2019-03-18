@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="computerNone" class="jun.spring.ch1.ioc.POJO.Computer">
+        <property name="name" value="Property"/>
+    </bean>
+
+    <bean id="computerByName" class="jun.spring.ch1.ioc.POJO.Computer" autowire="byName">
+        <property name="name" value="Property"/>
+    </bean>
+
+    <bean id="computerByType" class="jun.spring.ch1.ioc.POJO.NotNameMatchingComputer" autowire="byType">
+        <property name="name" value="Property"/>
+    </bean>
+
+    <bean id="printer" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+
+</beans>

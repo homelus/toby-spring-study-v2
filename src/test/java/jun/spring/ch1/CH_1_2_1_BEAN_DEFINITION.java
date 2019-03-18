@@ -18,6 +18,11 @@ import static org.junit.Assert.*;
 public class CH_1_2_1_BEAN_DEFINITION {
 
     @Test
+    public void 빈_DEFINITION_기초_테스트() {
+        // TODO
+    }
+
+    @Test
     public void 빈_DEFINITION_기본테스트() {
         BeanDefinition testBean = new RootBeanDefinition(TestBean.class);
         assertEquals(testBean.getBeanClassName(), "jun.spring.ch1.CH_1_2_1_BEAN_DEFINITION$TestBean");

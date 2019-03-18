@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:ref.properties"/>
+
+    <context:annotation-config/>
+
+    <bean id="user" class="jun.spring.ch1.ioc.POJO.User">
+        <property name="password" value="${test.psssword}"/>
+    </bean>
+
+    <!--
+        Activates replacement of ${...} placeholders by registering a
+        PropertySourcesPlaceholderConfigurer within the application context. Properties will
+        be resolved against the specified properties file or Properties object so called
+        "local properties", if any, and against the Spring Environment's current set of
+        PropertySources.
+    -->
+
+</beans>

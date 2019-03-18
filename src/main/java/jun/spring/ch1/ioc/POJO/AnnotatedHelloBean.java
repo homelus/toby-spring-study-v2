@@ -1,4 +1,4 @@
-package jun.spring.ch1.bean;
+package jun.spring.ch1.ioc.POJO;
 
 import org.springframework.stereotype.Component;
 

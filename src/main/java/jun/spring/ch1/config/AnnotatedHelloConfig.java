@@ -1,6 +1,6 @@
 package jun.spring.ch1.config;
 
-import jun.spring.ch1.bean.AnnotatedHelloBean;
+import jun.spring.ch1.ioc.POJO.AnnotatedHelloBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
