@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 이미 등록된 빈의 메타정보에 프로퍼티 항목을 추가해주는 역할을 한다. -->
+    <context:annotation-config/>
+
+    <!--
+        Activates various annotations to be detected in bean classes: Spring's @Required and
+        @Autowired, as well as JSR 250's @PostConstruct, @PreDestroy and @Resource (if available),
+        JAX-WS's @WebServiceRef (if available), EJB3's @EJB (if available), and JPA's
+        @PersistenceContext and @PersistenceUnit (if available). Alternatively, you may
+        choose to activate the individual BeanPostProcessors for those annotations.
+    -->
+
+    <bean id="nonResourceComputer" class="jun.spring.ch1.ioc.POJO.Computer">
+        <property name="name" value="Property"/>
+    </bean>
+
+    <bean id="resourceComputer" class="jun.spring.ch1.ioc.POJO.ResourceComputer">
+        <property name="name" value="Property"/>
+    </bean>
+
+    <bean id="printer" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+
+</beans>
