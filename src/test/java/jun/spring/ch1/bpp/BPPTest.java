@@ -5,19 +5,20 @@ import jun.spring.ch1.ioc.POJO.Printer;
 import jun.spring.ch1.ioc.POJO.StringPrinter;
 import org.junit.Test;
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.support.StaticApplicationContext;
+import org.springframework.web.bind.WebDataBinder;
+
+import java.util.Map;
 
 public class BPPTest {
 
     @Test
     public void bppTest() {
-
         StaticApplicationContext ac = new StaticApplicationContext();
         ac.addBeanFactoryPostProcessor(new CustomBeanFactoryPostProcessor());
         ac.registerBeanDefinition("hello", new RootBeanDefinition(Hello.class));
@@ -25,11 +26,19 @@ public class BPPTest {
         ac.registerBeanDefinition("printer", new RootBeanDefinition(StringPrinter.class));
         ac.registerBeanDefinition("printer2", new RootBeanDefinition(StringPrinter.class));
 
+        Map<String, Hello> beansOfType = ac.getBeansOfType(Hello.class);
+        System.out.println(beansOfType.size());
+
         ac.registerBeanDefinition("bpp", new RootBeanDefinition(CustomBeanPostProcessor.class));
+        System.out.println("before hello getBean");
+        Hello hello = ac.getBean("hello", Hello.class);
+        System.out.println(hello.sayHello());
+        System.out.println("after hello getBean");
         System.out.println("before Refresh");
         ac.refresh();
         System.out.println("after Refresh");
         ac.getBean("hello");
+
 
     }
 

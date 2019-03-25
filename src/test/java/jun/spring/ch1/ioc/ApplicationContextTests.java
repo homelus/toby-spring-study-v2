@@ -2,14 +2,35 @@ package jun.spring.ch1.ioc;
 
 import jun.spring.ch1.ioc.POJO.Hello;
 import org.junit.Test;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.context.support.StaticApplicationContext;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ApplicationContextTest {
+public class ApplicationContextTests {
+
+    @Test
+    public void STATIC_APPLICATION_CONTEXT_빈등록_테스트() {
+        StaticApplicationContext ac = new StaticApplicationContext();
+        System.out.println("Bean  Definition length: " + ac.getBeanDefinitionNames().length);
+        System.out.println("Singleton length: " + ac.getBeanFactory().getSingletonCount());
+
+        ac.registerSingleton("hello", Hello.class);
+        System.out.println();
+        System.out.println("Bean  Definition length: " + ac.getBeanDefinitionNames().length);
+        System.out.println("Singleton length: " + ac.getBeanFactory().getSingletonCount());
+
+        ac.getBean("hello");
+
+        System.out.println();
+        System.out.println("Bean  Definition length: " + ac.getBeanDefinitionNames().length);
+        System.out.println("Singleton length: " + ac.getBeanFactory().getSingletonCount());
+    }
 
     @Test
     public void genericApplicationContext_테스트() {
