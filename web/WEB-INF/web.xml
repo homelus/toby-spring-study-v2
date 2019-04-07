@@ -8,24 +8,24 @@
 
     <!-- 루트 애플리케이션 등록 -->
 
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+    <!--<listener>-->
+        <!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+    <!--</listener>-->
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-            classpath:daoContext.xml
-            classpath:applicationContext.xml
-        </param-value>
-    </context-param>
+    <!--<context-param>-->
+        <!--<param-name>contextConfigLocation</param-name>-->
+        <!--<param-value>-->
+            <!--classpath:etc/daoContext.xml-->
+            <!--classpath:etc/applicationContext.xml-->
+        <!--</param-value>-->
+    <!--</context-param>-->
 
-    <context-param>
-        <param-name>contextClass</param-name>
-        <param-value>
-            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
-        </param-value>
-    </context-param>
+    <!--<context-param>-->
+        <!--<param-name>contextClass</param-name>-->
+        <!--<param-value>-->
+            <!--org.springframework.web.context.support.AnnotationConfigWebApplicationContext-->
+        <!--</param-value>-->
+    <!--</context-param>-->
 
     <!-- 서블릿 애플리케이션 등록 -->
 
@@ -35,8 +35,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                classpath:spring-servlet.xml
-                classpath:applicationContext.xml
+                classpath:etc/applicationContext.xml
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>

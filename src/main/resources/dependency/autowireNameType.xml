@@ -3,18 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="computerNone" class="jun.spring.ch1.ioc.POJO.Computer">
+    <bean id="computerNone" class="jun.spring.etc.ioc.POJO.Computer">
         <property name="name" value="Property"/>
     </bean>
 
-    <bean id="computerByName" class="jun.spring.ch1.ioc.POJO.Computer" autowire="byName">
+    <bean id="computerByName" class="jun.spring.etc.ioc.POJO.Computer" autowire="byName">
         <property name="name" value="Property"/>
     </bean>
 
-    <bean id="computerByType" class="jun.spring.ch1.ioc.POJO.NotNameMatchingComputer" autowire="byType">
+    <bean id="computerByType" class="jun.spring.etc.ioc.POJO.NotNameMatchingComputer" autowire="byType">
         <property name="name" value="Property"/>
     </bean>
 
-    <bean id="printer" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+    <bean id="printer" class="jun.spring.etc.ioc.POJO.ConsolePrinter"/>
 
 </beans>

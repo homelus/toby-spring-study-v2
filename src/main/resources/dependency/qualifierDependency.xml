@@ -6,12 +6,12 @@
 
     <context:annotation-config/>
 
-    <bean id="computer" class="jun.spring.ch1.ioc.POJO.ComponentAutowiredQualifierComputer"/>
+    <bean id="computer" class="jun.spring.etc.ioc.POJO.ComponentAutowiredQualifierComputer"/>
 
-    <bean id="printer1" class="jun.spring.ch1.ioc.POJO.ManyPrinter1">
+    <bean id="printer1" class="jun.spring.etc.ioc.POJO.ManyPrinter1">
         <qualifier value="mainPrinter"/>
     </bean>
 
-    <bean id="printer2" class="jun.spring.ch1.ioc.POJO.ManyPrinter2"/>
+    <bean id="printer2" class="jun.spring.etc.ioc.POJO.ManyPrinter2"/>
 
 </beans>

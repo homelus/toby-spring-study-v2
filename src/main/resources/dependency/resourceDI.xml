@@ -15,14 +15,14 @@
         choose to activate the individual BeanPostProcessors for those annotations.
     -->
 
-    <bean id="nonResourceComputer" class="jun.spring.ch1.ioc.POJO.Computer">
+    <bean id="nonResourceComputer" class="jun.spring.etc.ioc.POJO.Computer">
         <property name="name" value="Property"/>
     </bean>
 
-    <bean id="resourceComputer" class="jun.spring.ch1.ioc.POJO.ResourceComputer">
+    <bean id="resourceComputer" class="jun.spring.etc.ioc.POJO.ResourceComputer">
         <property name="name" value="Property"/>
     </bean>
 
-    <bean id="printer" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+    <bean id="printer" class="jun.spring.etc.ioc.POJO.ConsolePrinter"/>
 
 </beans>

@@ -1,8 +1,8 @@
 package jun.spring.ch1.service;
 
-import jun.spring.ch1.ioc.POJO.Hello;
-import jun.spring.ch1.ioc.POJO.Printer;
-import jun.spring.ch1.ioc.POJO.StringPrinter;
+import jun.spring.etc.ioc.POJO.Hello;
+import jun.spring.etc.ioc.POJO.Printer;
+import jun.spring.etc.ioc.POJO.StringPrinter;
 import org.springframework.context.annotation.Bean;
 
 public class HelloService_2 {

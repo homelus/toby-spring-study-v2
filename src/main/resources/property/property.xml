@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mainDeal" class="jun.spring.ch1.ioc.POJO.MainDeal">
+    <bean id="mainDeal" class="jun.spring.etc.ioc.POJO.MainDeal">
         <property name="dealNo" value="1"/>
         <property name="clazz" value="java.lang.String"/>
         <property name="title" value="컴퓨터"/>

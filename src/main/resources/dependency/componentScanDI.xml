@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 빈 스캐닝은 항상 애노테이션 의존관계 설정을 지원한다. -->
-    <context:component-scan base-package="jun.spring.ch1.ioc.POJO"/>
+    <context:component-scan base-package="jun.spring.etc.ioc.POJO"/>
 
     <!--
         This tag implies the effects of the 'annotation-config' tag, activating @Required,

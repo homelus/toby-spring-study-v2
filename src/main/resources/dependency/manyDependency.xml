@@ -6,14 +6,14 @@
 
     <context:annotation-config/>
 
-    <bean id="computer" class="jun.spring.ch1.ioc.POJO.ComponentAutowiredEtcComputer"/>
+    <bean id="computer" class="jun.spring.etc.ioc.POJO.ComponentAutowiredEtcComputer"/>
 
-    <bean id="printer1" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+    <bean id="printer1" class="jun.spring.etc.ioc.POJO.ConsolePrinter"/>
 
-    <bean id="printer2" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+    <bean id="printer2" class="jun.spring.etc.ioc.POJO.ConsolePrinter"/>
 
-    <bean id="printer3" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+    <bean id="printer3" class="jun.spring.etc.ioc.POJO.ConsolePrinter"/>
     
-    <bean id="printer4" class="jun.spring.ch1.ioc.POJO.ConsolePrinter"/>
+    <bean id="printer4" class="jun.spring.etc.ioc.POJO.ConsolePrinter"/>
 
 </beans>
