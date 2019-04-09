@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CH_1_5_1_REF {
+public class Ch151_1_Ref {
 
     @Test
     public void 빈의_XML_역할_구분_기초테스트() {
