@@ -1,4 +1,4 @@
-package jun.spring.ch1.sub5;
+package jun.spring.ch1.sub5.etc;
 
 import lombok.Data;
 import org.junit.Test;
