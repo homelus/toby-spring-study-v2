@@ -188,16 +188,19 @@ public class Ch151_4_PropertyPlaceholderBFPPTest {
         MutablePropertyValues innerPvs2 = new MutablePropertyValues(innerPvs);
         someMap.put("${key4}", new BeanDefinitionHolder(new ChildBeanDefinition("jun1", innerPvs2), "child"));
 
-        pvs.add("someMap", someMap);
+        pvs1.add("someMap", someMap);
 
-        RootBeanDefinition jbd2 = new RootBeanDefinition(Jun.class, cas, pvs);
+        RootBeanDefinition jbd2 = new RootBeanDefinition(Jun.class, cas, pvs1);
         dlbf.registerBeanDefinition("jun2", jbd2);
+
+        RootBeanDefinition jbd3 = new RootBeanDefinition(Jun.class);
+        dlbf.registerBeanDefinition("jun3", jbd3);
 
         PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
         Properties props = new Properties();
         props.setProperty("age", "33");
         props.setProperty("var", "${m}var");
-        props.setProperty("ref", "jun2");
+        props.setProperty("ref", "jun3");
         props.setProperty("m", "my");
         props.setProperty("key4", "myKey4");
         props.setProperty("parent", "parent1");
