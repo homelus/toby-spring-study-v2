@@ -1,4 +1,4 @@
-package jun.spring.ch1.sub5;
+package jun.spring.ch1.sub5.etc;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver;
