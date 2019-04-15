@@ -10,3 +10,4 @@ Toby's Spring Vol.2 Study
 1. Test Code 작성
 2. Summary Code
 3. My Opinions
+4. Spring JavaBean Enable 관련 테스트 코드 
