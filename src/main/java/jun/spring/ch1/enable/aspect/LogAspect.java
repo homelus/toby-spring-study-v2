@@ -1,4 +1,4 @@
-package jun.spring.ch1.enable;
+package jun.spring.ch1.enable.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogAspect {
 
-    @Around("execution(* jun.spring.ch1.enable.TestService.*(..))")
+    @Around("execution(* jun.spring.ch1.enable.aspect.TestService.*(..))")
     public Object logging(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("logging 시작: " + pjp.getSignature().getName());
         Object result = pjp.proceed();
