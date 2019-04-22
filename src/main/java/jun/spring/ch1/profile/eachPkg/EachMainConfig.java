@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("jun.spring.ch1.profile.eachPkg")
-public class MainConfig {
+public class EachMainConfig {
 }

@@ -4,6 +4,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import({MainConfig.class, QaConfig.class, RealConfig.class})
-public class MainConfig {
+@Import({DevConfig.class, QaConfig.class, RealConfig.class})
+public class ImportMainConfig {
 }

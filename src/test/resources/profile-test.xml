@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans profile="dev">
+        <bean id="devBean" class="jun.spring.ch1.profile.DevBean"/>
+    </beans>
+
+    <beans profile="qa">
+        <bean id="qaBean" class="jun.spring.ch1.profile.QABean"/>
+        <bean id="publicBean" class="jun.spring.ch1.profile.PublicBean"/>
+    </beans>
+
+    <beans profile="real">
+        <bean id="realBean" class="jun.spring.ch1.profile.RealBean"/>
+        <bean id="publicBean" class="jun.spring.ch1.profile.PublicBean"/>
+    </beans>
+
+</beans>
