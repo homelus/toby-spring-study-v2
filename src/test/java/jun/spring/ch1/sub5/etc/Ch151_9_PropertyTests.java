@@ -20,11 +20,11 @@ public class Ch151_9_PropertyTests {
     @Test
     public void 환경변수_시스템_프로퍼티_테스트() {
         System.out.println("--------System Environment--------");
-        System.getenv().forEach((k, v) -> System.out.println(k + " : " + v));
+//        System.getenv().forEach((k, v) -> System.out.println(k + " : " + v));
         System.out.println("----------------------------------");
 
         System.out.println("--------System Properties--------");
-        System.getProperties().forEach((k, v) -> System.out.println(k + " : " + v));
+//        System.getProperties().forEach((k, v) -> System.out.println(k + " : " + v));
         System.out.println("----------------------------------");
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
@@ -32,7 +32,7 @@ public class Ch151_9_PropertyTests {
         StandardEnvironment standardEnvironment = context.getBean(StandardEnvironment.class);
         System.out.println(standardEnvironment.getPropertySources().toString());
         System.out.println("----------------------------------");
-        standardEnvironment.getSystemProperties().forEach((k, v) -> System.out.println(k + " : " + v));
+//        standardEnvironment.getSystemProperties().forEach((k, v) -> System.out.println(k + " : " + v));
     }
 
     @Test
