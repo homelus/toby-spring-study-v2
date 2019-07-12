@@ -1,5 +1,5 @@
 package jun.spring.mvc.support;
 
-public class ValidationSupport {
+public class TestSupport {
     String k;
 }
